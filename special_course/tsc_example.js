@@ -8,3 +8,6 @@ function multiply(a, b) {
 }
 console.log(multiply(10, 20));
 console.log("hello world");
+
+
+

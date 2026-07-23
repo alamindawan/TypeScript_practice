@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple ToDo</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-6">
+
+    <!-- Title -->
+    <h1 class="text-2xl font-bold text-center mb-6">Simple To Do Management</h1>
+    <!-- Add Task -->
+    <div class="flex gap-2 mb-6">
+      <form id="taskForm">
+        <input id="taskInput" type="text" placeholder="Enter a task"
+          class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium">
+          Add
+        </button>
+      </form>
+    </div>
+
+    <!-- Task View -->
+    <ul class="space-y-3" id="taskList">
+
+      <!-- Task 1 -->
+      <!-- <li class="flex items-center gap-3 border border-gray-200 rounded-lg p-3">
+        <input type="checkbox" class="w-5 h-5">
+        <span class="text-gray-800">Learn Tailwind CSS</span>
+      </li> -->
+    </ul>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
