@@ -1,10 +1,10 @@
-function add(a: number, b: number): number{
+function add1(a: number, b: number): number{
     return a + b;
 }
 
 console.log(add(19,6))
 
-function multiply(a: number, b: number): number{
+function multiply1(a: number, b: number): number{
     return a * b;
 }
 
