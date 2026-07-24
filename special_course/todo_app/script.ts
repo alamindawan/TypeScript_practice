@@ -28,17 +28,25 @@ function createSampleTass(): void{
 function renderTasks(): void{
     list.innerHTML = ""
     tasks.forEach((task)=>{
-        const li = document.createElement("li");
+        const li = document.createElement("li") as HTMLLIElement;
+        li.className = "flex items-center gap-3 border border-gray-200 rounded-lg p-3";
+
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.checked = task.completed;
+        const span = document.createElement("span");
+        span.className = "text-gray-800";
+        span.textContent = task.title;
+
+        span.classList.toggle("line-through", task.completed);
+        span.classList.toggle("text-gray-400", task.completed);
 
         checkbox.addEventListener("change", ()=>{
             task.completed = checkbox.checked;
+            
+            span.classList.toggle("line-through", checkbox.checked);
+            span.classList.toggle("text-gray-400", checkbox.checked);
         });
-
-        const span = document.createElement("span");
-        span.textContent = task.title;
 
         li.append(checkbox, span);
         list.append(li);
